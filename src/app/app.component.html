@@ -1,0 +1,57 @@
+<div class="calc">
+  <span class="output">{{ result }}</span>
+  <table class="">
+    <tbody>
+      <tr>
+        <td (click)="getReset()">AC</td>
+        <td
+          (click)="getNums(item)"
+          class="text-center"
+          *ngFor="let item of ['+', '%', '/']"
+        >
+          {{ item }}
+        </td>
+      </tr>
+      <tr>
+        <td
+          (click)="getNums(item)"
+          class="text-center"
+          *ngFor="let item of [9, 8, 7, '*']"
+        >
+          {{ item }}
+        </td>
+      </tr>
+      <tr>
+        <td
+          (click)="getNums(item)"
+          class="text-center"
+          *ngFor="let item of [6, 5, 4, '-']"
+        >
+          {{ item }}
+        </td>
+      </tr>
+      <tr>
+        <td
+          (click)="getNums(item)"
+          class="text-center"
+          *ngFor="let item of [3, 2, 1]"
+          class="last"
+        >
+          {{ item }}
+        </td>
+        <td>+/-</td>
+      </tr>
+      <tr>
+        <td
+          (click)="getNums(item)"
+          class="text-center"
+          *ngFor="let item of [0, '.']"
+          class="last"
+        >
+          {{ item }}
+        </td>
+        <td colspan="4" class="equal text-center" (click)="getEqual()">=</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
